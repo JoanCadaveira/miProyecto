@@ -19,15 +19,17 @@ gris: #1B2430
 }
 
 
-/*grillas mobile 480*/
+/*grilla Index480*/
 
 .grillaIndex{
+    width: 100%;
     display: grid;
+    grid-template-columns: 89% 11%;
     grid-template-areas: 
-    "header header"
-    "nav    nav"
-    "main   aside"
-    "footer footer";
+    "header     header"
+    "nav        nav"
+    "main       publicidad"
+    "footer     footer";
 }
 
 header{
@@ -42,14 +44,21 @@ main{
     grid-area: main;
 }
 
-aside{
-    grid-area: aside;
+.publicidad{
+    grid-area: publicidad;
 }
 
 footer{
     grid-area: footer;
 }
 
+.liveTwitter{
+    grid-area: liveTwitter;
+}
+
+.videoIntro{
+    grid-area: videoIntro;
+}
 
 
 /* head*/
@@ -79,7 +88,6 @@ header{
 /* NAV */
 
 nav ul{
-    background-color: #DA1212;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -87,12 +95,12 @@ nav ul{
 
 nav{
     position: sticky;
-    top: 0px
+    top: 0px;
+    background-color: #DA1212;
 }
 
 ul li{
-    list-style-type: none;
-    padding: 8px;
+    list-style-type: none
 }
 
 a{
@@ -129,29 +137,37 @@ p{
 .videoIntro{
     margin-left: auto;
     margin-right: auto;
-    border: 8px solid black;
+    border: 1px solid black;
     border-radius: 15px;
     display: block;
+    margin-top: 37px
 }
 
 /*aside*/
 
-aside{
+.publicidad{
     background-color: #1B2430;
     margin-top: 150px;
     border: 1px solid black;
     border-radius: 10px 0 0 10px;
+    position: sticky;
+    z-index: -1;
+    max-width: 100%;
 }
 
+
 .iconoAside{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 40px 10px
 }
 
+.liveTwitter{
+    display: none;
+}
 
 /* footer */
 
@@ -165,22 +181,12 @@ h3{
 }
 
 .nombreFooter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    border:1px solid black;
-    border-radius: 10px;
-    padding: 15px;
-    color: white;
-    font-family: 'Staatliches', cursive;
-    font-size: 26px;
+    display: none;
 }
 
 .sponsor{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         height: 125px;
         align-items: center;
         padding-left: 5px;       
@@ -199,7 +205,7 @@ h3{
 }
 
 .iconRedes{
-    width: 50px;
+    width: 48px;
     padding: 5px;
     height: 46px;
     border: 1px solid black;
@@ -215,8 +221,9 @@ h3{
 
 @media (min-width: 768px){
     .grillaIndex{
+        width: 100%;
         display: grid;
-        grid-template-columns: 20% auto;
+        grid-template-columns: 20% 80%;
         grid-template-areas: 
         "header header"
         "nav    main"
@@ -246,23 +253,33 @@ h3{
     }
 
     nav {
-        position: sticky;
-        top: 0px;
+        position: fixed;
+        top: 195px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     nav ul{
         flex-direction: column;
         align-items: center;
+        padding: 29px;
+    }
+
+    .videoIntro{
+        margin-left: auto;
+        margin-right: auto;
+        border: 8px solid black;
+        border-radius: 15px;
+        display: block;
+        margin-top: 37px
     }
     
     h3{
         display: flex;
         color: white;
         font-family: 'Staatliches', cursive;
-        font-size: 26px;
+        font-size: 15px;
     }
 
     .iconoSponsor{
@@ -275,8 +292,1030 @@ h3{
         display: flex;
         margin: 20px;
         text-align: center;
+        font-size: 15px;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 10px
+    }
+
+    .sponsor{
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 
+/*grilla index 1024*/
 
+
+@media (min-width: 1024px){
+    .grillaIndex{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-areas: 
+        "header     header"
+        "nav        nav"
+        "main       liveTwitter"
+        "footer     footer";
+    }
+
+    html{
+        max-width: 100%;
+    }
+
+    header{
+        background-color: #DA1212;
+        padding: 10px;
+    }
+    
+    .logo{
+        height: 200px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; 
+    }
+    
+    .logoNombre{
+        color: white;
+        font-family: 'Staatliches', cursive;
+        display: flex;
+        justify-content: space-around;
+        font-size: 50px;
+    }
+    
+    /* NAV */
+    
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;   
+        padding: 5px;  
+    }
+    
+    nav a{
+        padding: 25px
+    }
+
+
+    a{
+        padding: 6px;
+        font-size: 26px;
+    }
+
+    h1{
+        padding: 40px;
+        margin: 80px 40px 0px 40px;
+        font-size: 40px;
+    }
+    
+    p{
+        padding: 40px;
+        margin: 0px 40px 80px 40px;
+        font-size: 25px;
+    }
+
+    .videoIntro{
+        width: 562px;
+        height: 315px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 12px solid black;
+        border-radius: 15px;
+        display: block;
+    }
+
+    .liveTwitter{
+        display: flex;
+        font-weight: bold;
+        border-color: rgb(179, 179, 179);
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        margin: 10px 5px;
+        }
+    
+
+    footer{
+        background-color: #1B2430;
+        margin-top: 150px;
+    }
+
+    html{
+        max-width: 100%;
+    }
+    
+    h3{
+        font-size: 26px;
+    }
+    
+    .nombreFooter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        border:1px solid black;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 26px;
+    }
+       
+    .iconoSponsor{
+        width: 60px;
+        margin: 0px 20px;
+        height: 60px;
+    }
+
+    .sponsor{
+        padding-left: 0px;
+    }
+}
+
+/*Plantilla mobile*/
+
+
+.grillaPlantilla{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 89% 11%;
+    grid-template-areas: 
+    "header           header"
+    "nav              nav"
+    "main             publicidad"
+    "tabla            ."
+    "canchaContenedor ."
+    "dtTitulo         ."
+    "dtTexto          ."
+    "dtFoto           ."
+    "footer           footer";
+}
+
+.tabla{
+    grid-area: tabla;
+}
+
+.canchaContenedor{
+    grid-area: canchaContenedor;
+}
+
+.dtTitulo{
+    grid-area: dtTitulo;
+}
+
+.dtTexto{
+    grid-area: dtTexto;
+}
+
+.dtFoto{
+    grid-area: dtFoto;
+}
+
+h4{
+    color: black;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 40px 0px 40px;
+    font-size: 30px;
+    font-family: 'Staatliches', cursive; 
+}
+
+caption, table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 15px;
+    padding: 5px;
+}
+
+.jugadores{
+    background-color: #DA1212;
+    font-family: 'Staatliches', cursive;
+    font-size: 15px;
+    line-height: 10px;
+}
+
+.datos{
+    background-color: #858585;
+    font-family: 'Staatliches', cursive;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+}
+
+td{
+    font-family: 'Staatliches', cursive;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    
+}
+
+td a{
+    color:black;
+    padding: 0px;
+    font-size: 10px;
+}
+
+.tabla{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 100px;
+}
+
+.cancha{
+    width: 200px;
+    height: 200px;
+}
+
+.canchaContenedor{
+    position: relative;
+    top: 0;
+    z-index: -1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.camisetaPo{
+    position: absolute;
+    top: 160px;
+    left: 92px;
+    height: 20px;
+    
+}
+
+.camisetaLatIzq{
+    position: absolute;
+    top: 110px;
+    left: 32px;
+    height: 20px;
+}
+
+.camisetaLatDer{
+    position: absolute;
+    top: 110px;
+    left: 150px;
+    height: 20px;
+}
+
+.camisetaCenIzq{
+    position: absolute;
+    top: 124px;
+    left: 62px;
+    height: 20px;
+}
+
+.camisetaCenDer{
+    position: absolute;
+    top: 124px;
+    left: 118px;
+    height: 20px;
+}
+
+.camisetaMedDef{
+    position: absolute;
+    top: 92px;
+    left: 92px;
+    height: 20px;
+}
+
+.camisetaMedIzq{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    height: 20px;
+}
+
+.camisetaMedDer{
+    position: absolute;
+    top: 60px;
+    left: 122px;
+    height: 20px;
+}
+
+.camisetaExtIzq{
+    position: absolute;
+    top: 30px;
+    left: 46px;
+    height: 20px;
+}
+
+.camisetaExtDer{
+    position: absolute;
+    top: 30px;
+    left: 136px;
+    height: 20px;
+}
+
+.camisetaDelCen{
+    position: absolute;
+    top: 10px;
+    left: 92px;
+    height: 20px;
+}
+
+.dtTexto{
+        font-size: 10px;
+}
+
+.dtFoto{
+    display: flex;
+    justify-content: center;
+    height: 160px;
+}
+
+
+@media (min-width: 768px){
+    .grillaPlantilla{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "header header"
+        "nav    main"
+        "nav    tabla"
+        "nav    canchaContenedor"
+        "nav    dtTitulo"
+        "nav    dtTexto"
+        "nav    dtFoto"
+        "footer footer";
+    } 
+
+    .texto{
+        font-size: 10px;
+    }
+
+    .jugadores{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    
+    td{
+        font-family: 'Staatliches', cursive;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        
+    }
+    
+    td a{
+        color:black;
+        padding: 0px;
+        font-size: 20px;
+    }
+
+    .cancha{
+        width: 300px;
+        height: 300px;
+    }
+
+    .camisetaPo{
+        position: absolute;
+        top: 239px;
+        left: 137px;
+        height: 30px;
+    }
+    
+    .camisetaLatIzq{
+        position: absolute;
+        top: 165px;
+        left: 50px;
+        height: 30px;
+    }
+    
+    .camisetaLatDer{
+        position: absolute;
+        top: 165px;
+        left: 225px;
+        height: 30px;
+    }
+    
+    .camisetaCenIzq{
+        position: absolute;
+        top: 185px;
+        left: 94px;
+        height: 30px;
+    }
+    
+    .camisetaCenDer{
+        position: absolute;
+        top: 185px;
+        left: 177px;
+        height: 30px;
+    }
+    
+    .camisetaMedDef{
+        position: absolute;
+        top: 138px;
+        left: 137px;
+        height: 30px;
+    }
+    
+    .camisetaMedIzq{
+        position: absolute;
+        top: 90px;
+        left: 90px;
+        height: 30px;
+    }
+    
+    .camisetaMedDer{
+        position: absolute;
+        top: 90px;
+        left: 182px;
+        height: 30px;
+    }
+    
+    .camisetaExtIzq{
+        position: absolute;
+        top: 45px;
+        left: 68px;
+        height: 30px
+    }
+    
+    .camisetaExtDer{
+        position: absolute;
+        top: 45px;
+        left: 205px;
+        height: 30px
+    }
+    
+    .camisetaDelCen{
+        position: absolute;
+        top: 15px;
+        left: 137px;
+        height: 30px;
+    }
+    
+    .dtFoto{
+        display: flex;
+        justify-content: center;
+        height: 300px;
+    }
+      
+}
+
+@media (min-width: 1024px){
+    .grillaPlantilla{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "header           header"
+        "nav              nav"
+        "main             main"
+        "tabla            tabla"
+        "canchaContenedor canchaContenedor"
+        "dtTitulo         dtTitulo"
+        "dtTexto          dtFoto"
+        "footer           footer"
+        ;
+    } 
+
+
+    .jugadores{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    
+    td{
+        font-family: 'Staatliches', cursive;
+        font-size: 25px;
+        line-height: 25px;
+        text-align: center;
+        
+    }
+    
+    td a{
+        color:black;
+        padding: 0px;
+        font-size: 25px;
+    }
+
+    .cancha{
+        width: 400px;
+        height: 400px;
+    }
+
+    .camisetaPo{
+        position: absolute;
+        top: 310px;
+        left: 178px;
+        height: 50px;
+    }
+    
+    .camisetaLatIzq{
+        position: absolute;
+        top: 210px;
+        left: 64px;
+        height: 50px;
+    }
+    
+    .camisetaLatDer{
+        position: absolute;
+        top: 210px;
+        left: 290px;
+        height: 50px;
+    }
+    
+    .camisetaCenIzq{
+        position: absolute;
+        top: 238px;
+        left: 118px;
+        height: 50px;
+    }
+    
+    .camisetaCenDer{
+        position: absolute;
+        top: 238px;
+        left: 234px;
+        height: 50px;
+    }
+    
+    .camisetaMedDef{
+        position: absolute;
+        top: 174px;
+        left: 178px;
+        height: 50px;
+    }
+    
+    .camisetaMedIzq{
+        position: absolute;
+        top: 110px;
+        left: 112px;
+        height: 50px;
+    }
+    
+    .camisetaMedDer{
+        position: absolute;
+        top: 110px;
+        left: 240px;
+        height: 50px;
+    }
+    
+    .camisetaExtIzq{
+        position: absolute;
+        top: 50px;
+        left: 84px;
+        height: 50px
+    }
+    
+    .camisetaExtDer{
+        position: absolute;
+        top: 50px;
+        left: 271px;
+        height: 50px
+    }
+    
+    .camisetaDelCen{
+        position: absolute;
+        top: 10px;
+        left: 178px;
+        height: 50px;
+    }
+
+    .dtFoto{
+        height: 280px;
+        margin: 55px;
+    }
+
+
+    
+}
+
+
+/*Historia mobile 480*/
+
+.grillaHistoria{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 89% 11%;
+    grid-template-areas: 
+    "header       header"
+    "nav          nav"
+    "main         publicidad"
+    "trofeosTexto publicidad"
+    "trofeos      publicidad"
+    "footer       footer";
+}
+
+nav{
+    position: sticky;
+    top: 0px
+}
+
+.equipoold{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.estadio{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trofeos{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.publicidad{
+    max-height: 460px;
+}
+
+
+
+/*Historia tablet 768*/
+@media (min-width: 768px){
+    .grillaHistoria{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "header header"
+        "nav    main"
+        "nav    trofeosTexto"
+        "nav    trofeos"
+        "footer footer";
+    }
+
+    nav {
+        position: fixed;
+        top: 195px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .texto{
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .equipoold{
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;  
+    }
+    
+    .estadio{
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .trofeos{
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+} 
+
+/*Historia  1024*/
+@media (min-width: 1024px){
+    .grillaHistoria{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "header       header"
+        "nav          nav"
+        "main         main"
+        "trofeosTexto trofeos"
+        "footer       footer";
+    }
+
+    main{
+        margin-bottom: 100px;
+    }
+
+    .trofeos{
+        margin-top: 350px;
+        height: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav {
+        position: sticky;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h4{
+        color: black;
+        padding: 0;
+        text-align: center;
+        margin: 100px 0 50px 0;
+        font-size: 60px;
+        font-family: 'Staatliches', cursive;   
+    }
+
+    p{
+        font-family: 'Source Sans Pro', sans-serif;
+        padding: 40px;
+        text-align: center;
+        margin: 0px 40px 80px 40px;
+        font-size: 25px;
+    }
+
+    .equipoold, .estadio{
+        margin-top: 60px;
+    }
+
+}
+
+.historiaTitulo{
+    grid-area: historiaTitulo;
+}
+
+.historiaTexto{
+    grid-area: historiaTexto;
+}
+
+.estadioTexto{
+    grid-area: estadioTexto;
+}
+
+.trofeosTexto{
+    grid-area: trofeosTexto;
+}
+
+.trofeos{
+    grid-area: trofeos;
+}
+
+
+/*HOF mobile 480*/
+
+.grillaHof{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 89% 11%;
+    grid-template-areas: 
+    "header         header"
+    "nav            nav"
+    "hof            publicidad"
+    "tituloJugados ."
+    "tablaJugados   ."
+    "tituloGol      ."
+    "tablaGol       ."
+    "footer         footer";
+}
+
+.hof{
+    grid-area: hof;
+}
+
+.tablaJugados{
+    grid-area: tablaJugados;
+}
+
+.tablaGol{
+    grid-area: tablaGol;
+}
+
+.tituloJugados{
+    grid-area: tituloJugados;
+}
+
+.tituloGol{
+    grid-area: tituloGol;
+}
+
+h5{
+    color: black;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 40px 0px 40px;
+    font-size: 30px;
+    font-family: 'Staatliches', cursive;
+}
+
+.tablaJugados{
+    margin: 15px;
+}
+
+.tablaGol{
+    margin: 15px;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+}
+
+h5{
+    color: black;
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+    font-size: 25px;
+    font-family: 'Staatliches', cursive;
+}
+
+td{
+    padding: 4px;
+}
+
+
+
+
+/*HOF tablet 768*/
+
+@media (min-width: 768px){
+    .grillaHof{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "header header"
+        "nav    main"
+        "nav    hof"
+        "nav    tituloJugados"
+        "nav    tablaJugados"
+        "nav    tituloGol"
+        "nav    tablaGol"
+        "footer footer";
+    }
+}
+
+@media (min-width: 1024px){
+    .grillaHof{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-areas: 
+        "header        header"
+        "nav           nav"
+        "hof           hof"
+        "tituloJugados liveTwiiter"
+        "tablaJugados  liveTwitter"
+        "tituloGol     liveTwitter"
+        "tablaGol      liveTwitter"
+        "footer        footer"
+    }
+
+}
+
+/*contactanos mobile 480*/
+
+.grillaContactanos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 89% 11%;
+    grid-template-areas: 
+    "header         header"
+    "nav            nav"
+    "main           publicidad"
+    "formulario     publicidad"
+    "footer         footer";
+}
+
+.formulario{
+    grid-area: formulario;
+}
+
+.formulario{
+    padding: 10px;
+    background: #D1D1D1;
+    border-radius: 10px;
+    width: 245px;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea{
+    width: 210px;
+    height: 200px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
+label{
+    font-size: 25px;
+    font-family: 'Staatliches', cursive;
+}
+
+input{
+        margin: 5px;
+        padding: 10px 10px;
+        height: 32px;
+        font-size: 15px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+}
+
+.formularioNombre{
+    width: 137px;
+}
+
+.formularioEdad{
+    width: 50px
+}
+
+.formularioEmail{
+    width: 114px;
+}
+
+.boton{
+    padding: 5px
+}
+
+
+
+
+/*Contactanos tablet 768*/
+
+@media (min-width: 768px){
+    .grillaContactanos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "header header"
+        "nav    main"
+        "nav    formulario"
+        "footer footer";
+    }
+
+    textarea{
+        width: 536px;
+        height: 200px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .formularioNombre{
+        width: 304px;
+    }
+    
+    .formularioEdad{
+        width: 50px
+    }
+    
+    .formularioEmail{
+        width: 280px;
+    }
+
+    .formulario{
+        width: 565px;
+    }
+}
+
+@media (min-width: 1024px){
+    .grillaContactanos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% auto;
+        grid-template-areas: 
+        "header       header"
+        "nav          nav"
+        "main         main"
+        "formulario   liveTwitter"
+        "footer       footer";
+    }
+
+    .formulario{
+        width: 760px;
+    }
+
+    textarea{
+        width: 715px;
+        height: 600px;
+    }
+
+    .formularioEmail{
+        width: 300px;
+    }
+
+    .formularioNombre{
+        width: 324px;
+    }
+
+    .formularioEdad{
+        width: 70px;
+    }
+
+}
