@@ -213,7 +213,7 @@ h3{
 }
 
 .contenedorRedes img:hover{
-    background-color: #0f141b; 
+    background-color: #0f141b;
 }
 
 
@@ -878,6 +878,7 @@ td a{
     .dtFoto{
         height: 280px;
         margin: 55px;
+        z-index: -1;
     }
 
 
@@ -902,7 +903,8 @@ td a{
 
 nav{
     position: sticky;
-    top: 0px
+    top: 0px;
+    z-index: 1;
 }
 
 .equipoold{
@@ -968,7 +970,7 @@ nav{
     .equipoold{
         height: 300px;
         margin-left: auto;
-        margin-right: auto;  
+        margin-right: auto;
     }
     
     .estadio{
@@ -1037,6 +1039,8 @@ nav{
     .equipoold, .estadio{
         margin-top: 60px;
     }
+
+    
 
 }
 

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -64,7 +65,7 @@
                 es uno de los equipos deportivos con mejor valor de mercado en el mundo, siendo el primero en superar 
                 los 3000 millones USD en 2013.
                 </P>
-                <div class="equipoold">
+                <div data-aos="flip-down" class="equipoold">
                     <img src="../assets/img/equipoold.jpg" alt="equipo">
                 </div>
             </div>
@@ -86,7 +87,7 @@
             segundo nivel al South Stand, que elevaría la capacidad a alrededor de 88 000. La asistencia récord del 
             estadio se registró en 1939, cuando 76.962 espectadores vieron la semifinal de la FA Cup entre 
             Wolverhampton Wanderers y Grimsby Town.</p>
-            <div class="estadio">
+            <div data-aos="flip-down" class="estadio">
                 <img src="../assets/img/oldtrafford.jpg" alt="Old Trafford">
             </div>
             </div>        
@@ -122,7 +123,7 @@
             League, la Fa Cup y la Liga de Campeones y un doblete en la temporada 2007-08 ganando la Premier 
             League y la Liga de Campeones.</p>
             </div>  
-        <div class="trofeos">
+        <div data-aos="zoom-in-left" class="trofeos">
             <img src="../assets/img/trofeos.jpg" alt="trofeos">
         </div>   
     
@@ -164,6 +165,10 @@
                 </a>
             </div>
         </div>
-    </div>    
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>    
 </body>
 </html>
