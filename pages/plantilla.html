@@ -10,53 +10,50 @@
     <title>Manchester United</title>
 </head>
 <body>
-    
-    <header>     
-        <nav class="navbar navbar-expand-lg navbar-light rojo">
-            <div class="container-fluid">
-                <a class="navbar-brand navbar-texto" href="#">
-                    <img src="../assets/img/manchestercrest.svg.png" alt="Logo MAN UTD" class="w-50">
-                    <br>
-                    MANCHESTER UNITED</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse flex" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="plantilla.html">PLANTILLA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="historia.html">HISTORIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="halloffame.html">HALL OF FAME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contactanos.html">CONTÁCTANOS</a>
-                        </li>
-                    </ul>
+    <div class="gridPlantilla">
+        <header>     
+            <nav class="navbar navbar-expand-lg navbar-light rojo">
+                <div class="container-fluid">
+                    <a class="navbar-brand navbar-texto" href="#">
+                        <img src="../assets/img/manchestercrest.svg.png" alt="Logo MAN UTD" class="w-25 logo">
+                        MANCHESTER UNITED</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse flex" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./plantilla.html">PLANTILLA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./historia.html">HISTORIA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./halloffame.html">HALL OF FAME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./contactanos.html">CONTÁCTANOS</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    
-    <section class="container">
-        <div>
-            <h4 class="plantilla mt-5">PLANTILLA</h4>
-            <p class="text-center">Te mostramos que jugadores se encuentran en nuestra plantilla y 
-            que tipo de formación utilizamos para poder pelear en la Premier League.<br> 
-            Si deseas conocer más sobre tus jugadores favoritos, 
-            podrás acceder a su biografía clickeando en su nombre.</p>
-        </div> 
-    </section>
+            </nav>
+        </header>
 
-    <section class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-7 mt-5 tabla">
+        <main class="contenedorPlantilla">
+            <div class="introduccionPlantilla">
+                <h4>PLANTILLA</h4>
+                <p>Te mostramos que jugadores se encuentran en nuestra plantilla y 
+                que tipo de formación utilizamos para poder pelear en la Premier League.<br> 
+                Si deseas conocer más sobre tus jugadores favoritos, 
+                podrás acceder a su biografía clickeando en su nombre.
+                </p>
+            </div>
+
+            <div class="tabla">
                 <table>
                     <tr class="datos">
                         <td>Dorsal</td>
@@ -326,83 +323,315 @@
                         <td>17 años</td>
                         <td>2023</td>
                     </tr>
-                </table>            
-            </div> 
-            <div class="col-lg-6 col-md-5 mt-5 canchaContenedor align-self-center" data-aos="flip-up">
+                </table>
+            </div>
+
+            <div class="canchaContenedor">
                 <img class="cancha" src="../assets/img/cancha.png" alt="Cancha"> 
-                    <div>
-                        <img class="camisetaPo" src="../assets/img/camiseta2.png" alt="Camiseta Arquero">   
-                        <img class="camisetaLatIzq" src="../assets/img/camiseta.png" alt="Camiseta lateral izquierdo">
-                        <img class="camisetaLatDer" src="../assets/img/camiseta.png" alt="Camiseta lateral derecho">
-                        <img class="camisetaCenIzq" src="../assets/img/camiseta.png" alt="Camiseta central izquierdo">
-                        <img class="camisetaCenDer" src="../assets/img/camiseta.png" alt="Camiseta central derecho">
-                        <img class="camisetaMedDef" src="../assets/img/camiseta.png" alt="Camiseta medio defensivo">
-                        <img class="camisetaMedIzq" src="../assets/img/camiseta.png" alt="Camiseta medio izquierdo">
-                        <img class="camisetaMedDer" src="../assets/img/camiseta.png" alt="Camiseta medio derecho">
-                        <img class="camisetaExtIzq" src="../assets/img/camiseta.png" alt="Camiseta extremo izquierdo">
-                        <img class="camisetaExtDer" src="../assets/img/camiseta.png" alt="Camiseta extremo derecho">
-                        <img class="camisetaDelCen" src="../assets/img/camiseta.png" alt="Camiseta delantero centro">
+                <!-- Button trigger modal  PO-->
+                <img class="camisetaPo btn" src="../assets/img/camiseta2.png" alt="Camiseta Arquero" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <!-- Modal PO-->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Arquero</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: David de Gea
+                            <br>
+                            Suplentes: Lee Grant - Tom Heaton - Dean Henderson
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Lat Izq -->             
+                <img class="camisetaLatIzq btn" src="../assets/img/camiseta.png" alt="Camiseta lateral izquierdo" data-bs-toggle="modal" data-bs-target="#exampleModa2"> 
+                <!-- Modal Lat Izq -->
+                <div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Lateral izquierdo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Luke Shaw
+                            <br>
+                            Suplente: Alex Telles
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Lat Der -->             
+                <img class="camisetaLatDer btn" src="../assets/img/camiseta.png" alt="Camiseta lateral derecho" data-bs-toggle="modal" data-bs-target="#exampleModa3">
+                <!-- Modal Lat Der -->
+                <div class="modal fade" id="exampleModa3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Lateral derecho</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Aaron Wan-Bissaka
+                            <br>
+                            Suplente: Diogo Dalot
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Central Derecho -->             
+                <img class="camisetaCenDer btn" src="../assets/img/camiseta.png" alt="Camiseta central derecho" data-bs-toggle="modal" data-bs-target="#exampleModa4">
+                <!-- Modal Cen Der -->
+                <div class="modal fade" id="exampleModa4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Central derecho</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Victor Lindelöf
+                            <br>
+                            Suplentes: Harry Maguire - Eric Bailly - Phil Jones - Will Fish
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Central Izquierdo -->             
+                <img class="camisetaCenIzq btn" src="../assets/img/camiseta.png" alt="Camiseta central izquierdo" data-bs-toggle="modal" data-bs-target="#exampleModa5"> 
+                <!-- Modal Cen Izq -->
+                <div class="modal fade" id="exampleModa5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Central izquierdo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Raphaël Varane
+                            <br>
+                            Suplentes: Harry Maguire - Eric Bailly - Phil Jones - Will Fish
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Medio Defensivo -->             
+                <img class="camisetaMedDef btn" src="../assets/img/camiseta.png" alt="Camiseta medio defensivo" data-bs-toggle="modal" data-bs-target="#exampleModa6">
+                <!-- Modal Med Def -->
+                <div class="modal fade" id="exampleModa6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Medio defensivo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Scott McTominay
+                            <br>
+                            Suplente: Frederico Rodrigues Santos
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Medio Centro Izquierdo -->             
+                <img class="camisetaMedIzq btn" src="../assets/img/camiseta.png" alt="Camiseta medio izquierdo" data-bs-toggle="modal" data-bs-target="#exampleModa7">
+                <!-- Modal Med Izq -->
+                <div class="modal fade" id="exampleModa7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Medio centro izquierdo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Bruno Fernandes
+                            <br>
+                            Suplentes: Juan Mata - Jesse Lingard - Hannibal Mejbri
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Medio Centro Derecho -->             
+                <img class="camisetaMedDer btn" src="../assets/img/camiseta.png" alt="Camiseta medio derecho" data-bs-toggle="modal" data-bs-target="#exampleModa8">
+                <!-- Modal Med Der -->
+                <div class="modal fade" id="exampleModa8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Medio centro izquierdo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Paul Pogba
+                            <br>
+                            Suplentes: Juan Mata - Jesse Lingard - Hannibal Mejbri
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Extremo Izquierdo -->             
+                <img class="camisetaExtIzq btn" src="../assets/img/camiseta.png" alt="Camiseta extremo izquierdo"  data-bs-toggle="modal" data-bs-target="#exampleModa9">
+                <!-- Modal Ext Izq -->
+                <div class="modal fade" id="exampleModa9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Medio centro izquierdo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Marcus Rashford
+                            <br>
+                            Suplentes: Anthony Elanga - Alejandro Garnacho
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Extremo Derecho -->             
+                <img class="camisetaExtDer btn" src="../assets/img/camiseta.png" alt="Camiseta extremo derecho" data-bs-toggle="modal" data-bs-target="#exampleModa10">
+                <!-- Modal Ext Der -->
+                <div class="modal fade" id="exampleModa10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Medio centro izquierdo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Jadon Sancho
+                            <br>
+                            Suplentes: Anthony Elanga - Shola Shoretire
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal Delantero Centro -->             
+                <img class="camisetaDelCen btn" src="../assets/img/camiseta.png" alt="Camiseta delantero centro" data-bs-toggle="modal" data-bs-target="#exampleModa11">
+                <!-- Modal Del Cen -->
+                <div class="modal fade" id="exampleModa11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Medio centro izquierdo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Titular: Cristiano Ronaldo
+                            <br>
+                            Suplentes: Edinson Cavani - D'Mani Mellor
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    
-    <section class="container">
-        <h4 class="dtTitulo mt-5">Director tecnico</h4> 
-        <div class="row">
-            <div class="col-lg-6 mt-4 dtTexto">
-                <p class="mt-2">El Manchester United se complace en anunciar el nombramiento de Erik ten Hag como 
-                    entrenador del primer equipo masculino, sujeto a los requisitos de visa de trabajo, desde el final 
-                    de esta temporada hasta junio de 2025, con la opción de extenderlo por un año más.
-                    <br>
-                    Empezó en el mundo de los banquillos en el filial del FC Twente y más tarde, por el cuerpo técnico 
-                    del PSV como ayudante de Fred Rutten, pero su gran trabajo llegó con el Go Ahead Eagles, a quien 
-                    ascendió a la Eredivisie. En 2013, se marcho a Alemania para trabajar en el filial del Bayern Múnich 
-                    durante los dos primeros años de Pep Guardiola. En temporada y media en el FC Utrecht consiguió 
-                    56 victorias, 25 empates y 30 derrotas.
-                    <br>
-                      Llegó en Diciembre de 2017 al Ajax tras dejar el FC Utrecht a mitad de temporada, ya que la apuesta 
-                    por Marcel Keizer tras la marcha de Peter Bosz había salido realmente mala (fuera de Europa y de 
-                    Copa en Diciembre). Realiza una gran temporada 2018-19, llegando a las semifinales de la Liga de 
-                    Campeones, eliminando en los octavos y cuartos de final al Real Madrid y a la Juventus FC, 
-                    respectivamente.
-                    </p>
+
+            <h4 class="dtTitulo">Director tecnico</h4>  
+        
+            <div class="dtTexto">
+                <p>El Manchester United se complace en anunciar el nombramiento de Erik ten Hag como 
+                entrenador del primer equipo masculino, sujeto a los requisitos de visa de trabajo, desde el final 
+                de esta temporada hasta junio de 2025, con la opción de extenderlo por un año más.
+                <br>
+                Empezó en el mundo de los banquillos en el filial del FC Twente y más tarde, por el cuerpo técnico 
+                del PSV como ayudante de Fred Rutten, pero su gran trabajo llegó con el Go Ahead Eagles, a quien 
+                ascendió a la Eredivisie. En 2013, se marcho a Alemania para trabajar en el filial del Bayern Múnich 
+                durante los dos primeros años de Pep Guardiola. En temporada y media en el FC Utrecht consiguió 
+                56 victorias, 25 empates y 30 derrotas.
+                <br>
+                Llegó en Diciembre de 2017 al Ajax tras dejar el FC Utrecht a mitad de temporada, ya que la apuesta 
+                por Marcel Keizer tras la marcha de Peter Bosz había salido realmente mala (fuera de Europa y de 
+                Copa en Diciembre). Realiza una gran temporada 2018-19, llegando a las semifinales de la Liga de 
+                Campeones, eliminando en los octavos y cuartos de final al Real Madrid y a la Juventus FC, 
+                respectivamente.
+                </p>
             </div>
-            <div class="col-lg-6 mt-5" data-aos="flip-right">
-                <img class="dtFoto" src="../assets/img/erikdt.jpg" alt="Erik DT">
-            </div>
-        </div>
-    </section>
+            <img data-aos="fade-up" class="dtFoto" src="../assets/img/erikdt.jpg" alt="Erik foto">
             
+            <h3 class="publicidadTexto">Sponsored by:</h3>
+            <aside class="publicidad">
+                <img class="iconoAside" src="../assets/img/adidasicono.png" alt="Logo Adidas2">
+                <img class="iconoAside" src="../assets/img/chevroleticon.png" alt="Logo Chevrolet2">
+                <img class="iconoAside" src="../assets/img/t3icon.png" alt="Logo T32">
+                <img class="iconoAside" src="../assets/img/teamviewericon.png" alt="Logo TeamViewer2">
+            </aside>
 
-
-
-    <footer>
-        <h3 class="nombreFooter">MANCHESTER UNITED</h3>
-        <div class="redesSociales">   
-            <a class="contenedorRedes" href="https://www.facebook.com/manchesterunited" target="_blank">
-                <img class="iconRedes" src="../assets/img/logofacebook.svg" alt="Facebook MAN UTD">
-            </a>
-
-            <a class="contenedorRedes" href="https://www.instagram.com/manchesterunited/" target="_blank">
-                <img class="iconRedes"  src="../assets/img/logoinstagram.svg" alt="Instagram MAN UTD">
-            </a>
-
-            <a class="contenedorRedes" href="https://twitter.com/ManUtd_Es" target="_blank">
-                <img class="iconRedes"  src="../assets/img/logotwitter.svg" alt="Twitter MAN UTD">
-            </a>
-
-            <a class="contenedorRedes" href="https://www.youtube.com/manutd" target="_blank">
-                <img class="iconRedes"  src="../assets/img/logoyoutube.svg" alt="Youtube MAN UTD">
-            </a>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+            <aside class="liveTwitter">
+                <a class="twitter-timeline" data-height="2500" href="https://twitter.com/ManUtd_Es?ref_src=twsrc%5Etfw">Tweets by ManUtd_Es</a> <script 
+                async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </aside>
+        </main>
+    
+        <footer>
+            <div class="sponsor">
+                <h3>Sponsored by: </h3>
+                <img class="iconoSponsor" src="../assets/img/adidasicono.png" alt="Logo Adidas">
+                <img class="iconoSponsor" src="../assets/img/chevroleticon.png" alt="Logo Chevrolet">
+                <img class="iconoSponsor" src="../assets/img/t3icon.png" alt="Logo T3">
+                <img class="iconoSponsor" src="../assets/img/teamviewericon.png" alt="Logo TeamViewer">
+    
+                <h3 class="nombreFooter">MANCHESTER UNITED</h3>
+    
+                <div class="redesSociales">   
+                    <h3>Redes sociales: </h3>
+                    <a class="contenedorRedes" href="https://www.facebook.com/manchesterunited" target="_blank">
+                        <img class="iconRedes" src="../assets/img/logofacebook.svg" alt="Facebook MAN UTD">
+                    </a>
+    
+                    <a class="contenedorRedes" href="https://www.instagram.com/manchesterunited/" target="_blank">
+                    <img class="iconRedes"  src="../assets/img/logoinstagram.svg" alt="Instagram MAN UTD">
+                    </a>
+    
+                    <a class="contenedorRedes" href="https://twitter.com/ManUtd_Es" target="_blank">
+                        <img class="iconRedes"  src="../assets/img/logotwitter.svg" alt="Twitter MAN UTD">
+                    </a>
+    
+                    <a class="contenedorRedes" href="https://www.youtube.com/manutd" target="_blank">
+                        <img class="iconRedes"  src="../assets/img/logoyoutube.svg" alt="Youtube MAN UTD">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </div>
 </body>
 </html>
