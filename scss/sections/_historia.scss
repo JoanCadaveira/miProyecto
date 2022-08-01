@@ -1,0 +1,72 @@
+.contenedorHistoria{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "tituloHistoria"
+    "textoHistoria"
+    "equipoOld"
+    "tituloEstadio"
+    "textoEstadio"
+    "estadio"
+    "tituloTrofeos"
+    "textoTrofeos"
+    "trofeos"
+    "publicidadTexto"
+    "publicidad"
+    ;
+}
+
+.tituloHistoria{
+    grid-area: tituloHistoria;
+}
+
+.textoHistoria{
+    grid-area: textoHistoria;
+}
+
+.equipoOld{
+    grid-area: equipoOld;
+}
+
+.tituloEstadio{
+    grid-area: tituloEstadio;
+}
+
+.textoEstadio{
+    grid-area: textoEstadio;
+}
+
+.estadio{
+    grid-area: estadio;
+}
+
+.tituloTrofeos{
+    grid-area: tituloTrofeos;
+}
+
+.textoTrofeos{
+    grid-area: textoTrofeos;
+}
+
+.trofeos{
+    grid-area: trofeos;
+}
+
+@media (min-width: 992px){
+    .contenedorHistoria{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-areas: 
+        "tituloHistoria liveTwitter"
+        "textoHistoria  liveTwitter"
+        "equipoOld      liveTwitter"
+        "tituloEstadio  liveTwitter"
+        "textoEstadio   liveTwitter"
+        "estadio        liveTwitter"
+        "tituloTrofeos  liveTwitter"
+        "textoTrofeos   liveTwitter"
+        "trofeos        liveTwitter"
+        ;
+    }
+}

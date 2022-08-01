@@ -1,0 +1,97 @@
+.contenedorHof{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "tituloHof"
+    "textoHof"
+    "tituloJugados"
+    "tablaJugados"
+    "tituloGol"
+    "tablaGol"
+    "tituloFerguson"
+    "textoFerguson"
+    "fotoFerguson"
+    "publicidadTexto"
+    "publicidad"
+    ;
+}
+
+.tituloHof{
+    grid-area: tituloHof;
+}
+
+.textoHof{
+    grid-area: textoHof;
+}
+
+.tituloJugados{
+    grid-area: tituloJugados;
+}
+
+.tablaJugados{
+    grid-area: tablaJugados;
+}
+
+.tituloGol{
+    grid-area: tituloGol;
+}
+
+.tablaGol{
+    grid-area: tablaGol;
+}
+
+.tituloFerguson{
+    grid-area: tituloFerguson;   
+}
+
+.textoFerguson{
+    grid-area: textoFerguson;
+}
+
+.fotoFerguson{
+    grid-area: fotoFerguson;
+}
+
+h5{
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    font-family: $ffTitulos;
+}
+
+.datos{
+    background-color: #858585;
+    font-family: $ffTitulos;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+}   
+
+@media (min-width: 992px){
+    .contenedorHof{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-areas: 
+        "tituloHof      liveTwitter"
+        "textoHof       liveTwitter"
+        "tituloJugados  liveTwitter"
+        "tablaJugados   liveTwitter"
+        "tituloGol      liveTwitter"
+        "tablaGol       liveTwitter"
+        "tituloFerguson liveTwitter"
+        "textoFerguson  liveTwitter"
+        "fotoFerguson   liveTwitter"
+        ;
+    }
+    h5{
+        margin-top: 50px;
+    }
+}
+
+
+
+

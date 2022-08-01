@@ -1,0 +1,14 @@
+@import "./general/reset";
+@import "./general/variables";
+@import "./general/mixins";
+
+// NavBar
+@import "./sections/nav";
+//Contenido
+@import "./sections/index";
+@import "./sections/plantilla";
+@import "./sections/historia";
+@import "./sections/halloffame";
+@import "./sections/contactanos";
+//Footer
+@import "./sections/footer";
