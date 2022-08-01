@@ -129,7 +129,8 @@ p{
     }
 
     .videoIntro{
-        @include centrarImagen;
+        margin-right: auto;
+        margin-left: auto;
         border: 16px solid black;
         border-radius: 15px;
         display: block;

@@ -53,7 +53,8 @@ footer{
         }
         .sponsor{
             @include flexCenter;
-            @include centrarImagen;
+            margin-right: auto;
+            margin-left: auto;
             padding-top: 10px;
         }
     }

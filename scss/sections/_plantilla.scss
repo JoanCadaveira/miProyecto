@@ -85,7 +85,8 @@ table, tr, td{
 .canchaContenedor{
     position: relative;
     display: block;
-    @include centrarImagen;
+    margin-right: auto;
+    margin-left: auto;
     .cancha{
         width: 200px;
         height: 200px;
@@ -93,7 +94,11 @@ table, tr, td{
 }
 
 .jugadorPlantilla{
-    @include jugadoresFoto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+    height: 130px;
+    margin-top: 10px;
 }
 
 .camisetaPo{

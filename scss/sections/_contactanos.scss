@@ -30,7 +30,8 @@ form{
     border-radius: 10px;
     max-width: 320px;
     margin: 15px;
-    @include centrarImagen      
+    margin-right: auto;
+    margin-left: auto;     
 }
 
 textarea{
