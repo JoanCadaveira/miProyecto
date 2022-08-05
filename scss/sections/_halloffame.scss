@@ -1,5 +1,4 @@
 .contenedorHof{
-    grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -62,17 +61,8 @@ h5{
     font-family: $ffTitulos;
 }
 
-.datos{
-    background-color: #858585;
-    font-family: $ffTitulos;
-    font-size: 10px;
-    line-height: 10px;
-    text-align: center;
-}   
-
 @media (min-width: 992px){
     .contenedorHof{
-        grid-area: main;
         display: grid;
         grid-template-columns: 80% 20%;
         grid-template-areas: 

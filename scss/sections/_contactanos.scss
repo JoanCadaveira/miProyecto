@@ -1,5 +1,4 @@
 .contenedorContactanos{
-    grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -72,7 +71,6 @@ textarea{
 
 @media (min-width: 992px){
     .contenedorContactanos{
-        grid-area: main;
         display: grid;
         grid-template-columns: 80% 20%;
         grid-template-areas: 

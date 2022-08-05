@@ -41,6 +41,7 @@ h6 {
     font-size: "Staatliches", cursive; }
   .flex {
     display: flex;
+    align-items: center;
     justify-content: center; } }
 
 .gridIndex {
@@ -74,7 +75,7 @@ footer {
 .publicidad {
   grid-area: publicidad; }
 
-h1 {
+h1, h4 {
   text-align: center;
   font-size: 20px;
   font-family: "Staatliches", cursive;
@@ -89,8 +90,8 @@ p {
   font-size: 10px; }
 
 .videoIntro {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   border: 1px solid black;
   border-radius: 15px;
   display: block;
@@ -114,11 +115,10 @@ p {
 
 @media (min-width: 992px) {
   .contenedorIndex {
-    grid-area: main;
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-areas: "introduccion    liveTwitter" "video           liveTwitter"; }
-  h1 {
+  h1, h4 {
     font-size: 25px; }
   p {
     font-size: 18px; }
@@ -167,44 +167,231 @@ p {
 .dtFoto {
   grid-area: dtFoto; }
 
-h4 {
+.dtFoto {
+  height: 175px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 992px) {
+  .contenedorPlantilla {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "introduccionPlantilla liveTwitter" "tabla                 liveTwitter" "canchaContenedor      liveTwitter" "dtTitulo              liveTwitter" "dtTexto               liveTwitter" "dtFoto                liveTwitter"; }
+  .dtFoto {
+    height: 280px; } }
+
+.contenedorHistoria {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "tituloHistoria" "textoHistoria" "equipoOld" "tituloEstadio" "textoEstadio" "estadio" "tituloTrofeos" "textoTrofeos" "trofeos" "publicidadTexto" "publicidad"; }
+
+.tituloHistoria {
+  grid-area: tituloHistoria; }
+
+.textoHistoria {
+  grid-area: textoHistoria; }
+
+.equipoOld {
+  grid-area: equipoOld; }
+
+.tituloEstadio {
+  grid-area: tituloEstadio; }
+
+.textoEstadio {
+  grid-area: textoEstadio; }
+
+.estadio {
+  grid-area: estadio; }
+
+.tituloTrofeos {
+  grid-area: tituloTrofeos; }
+
+.textoTrofeos {
+  grid-area: textoTrofeos; }
+
+.trofeos {
+  grid-area: trofeos; }
+
+@media (min-width: 992px) {
+  .contenedorHistoria {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "tituloHistoria liveTwitter" "textoHistoria  liveTwitter" "equipoOld      liveTwitter" "tituloEstadio  liveTwitter" "textoEstadio   liveTwitter" "estadio        liveTwitter" "tituloTrofeos  liveTwitter" "textoTrofeos   liveTwitter" "trofeos        liveTwitter"; } }
+
+.contenedorHof {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "tituloHof" "textoHof" "tituloJugados" "tablaJugados" "tituloGol" "tablaGol" "tituloFerguson" "textoFerguson" "fotoFerguson" "publicidadTexto" "publicidad"; }
+
+.tituloHof {
+  grid-area: tituloHof; }
+
+.textoHof {
+  grid-area: textoHof; }
+
+.tituloJugados {
+  grid-area: tituloJugados; }
+
+.tablaJugados {
+  grid-area: tablaJugados; }
+
+.tituloGol {
+  grid-area: tituloGol; }
+
+.tablaGol {
+  grid-area: tablaGol; }
+
+.tituloFerguson {
+  grid-area: tituloFerguson; }
+
+.textoFerguson {
+  grid-area: textoFerguson; }
+
+.fotoFerguson {
+  grid-area: fotoFerguson; }
+
+h5 {
+  padding: 15px;
   text-align: center;
-  font-size: 25px;
-  font-family: "Staatliches", cursive;
-  margin: 20px 40px 0px 40px;
-  padding: 40px; }
+  margin: 0;
+  font-size: 20px;
+  font-family: "Staatliches", cursive; }
 
-.tabla {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 100px; }
-  .tabla .datos {
-    background-color: #858585;
-    font-family: "Staatliches", cursive;
-    font-size: 10px;
-    line-height: 10px;
-    text-align: center; }
+@media (min-width: 992px) {
+  .contenedorHof {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "tituloHof      liveTwitter" "textoHof       liveTwitter" "tituloJugados  liveTwitter" "tablaJugados   liveTwitter" "tituloGol      liveTwitter" "tablaGol       liveTwitter" "tituloFerguson liveTwitter" "textoFerguson  liveTwitter" "fotoFerguson   liveTwitter"; }
+  h5 {
+    margin-top: 50px; } }
 
-table, tr, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-spacing: 15px;
+.contenedorContactanos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "tituloContactanos" "textoContactanos" "formulario" "publicidadTexto" "publicidad"; }
+
+.tituloContactanos {
+  grid-area: tituloContactanos; }
+
+.textoContactanos {
+  grid-area: textoContactanos; }
+
+.formulario {
+  grid-area: formulario; }
+
+form {
+  padding: 10px;
+  background: #D1D1D1;
+  border-radius: 10px;
+  max-width: 320px;
+  margin: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+textarea {
+  width: 300px;
+  height: 200px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px; }
+  textarea label {
+    font-size: 25px;
+    font-family: "Staatliches", cursive; }
+    textarea label input {
+      margin: 5px;
+      padding: 10px 10px;
+      height: 32px;
+      font-size: 15px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: bold; }
+
+.formularioNombre {
+  width: 80%; }
+
+.formularioEdad {
+  width: 30%; }
+
+.formularioEmail {
+  width: 80%; }
+
+.boton {
   padding: 5px; }
-  table td, tr td, td td {
-    font-family: "Staatliches", cursive;
-    font-size: 10px;
-    line-height: 10px;
-    width: 150px;
-    text-align: center; }
-    table td a, tr td a, td td a {
-      color: black;
-      padding: 0px;
-      font-size: 10px;
-      text-decoration: none;
-      font-family: "Staatliches", cursive; }
-      table td a:hover, tr td a:hover, td td a:hover {
-        color: #DA1212; }
+
+@media (min-width: 992px) {
+  .contenedorContactanos {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "tituloContactanos liveTwitter" "textoContactanos  liveTwitter" "formulario        liveTwitter"; }
+  form {
+    max-width: 740px; }
+  textarea {
+    width: 715px;
+    height: 600px; }
+  .formularioEmail {
+    width: 80%; }
+  .formularioNombre {
+    width: 80%; }
+  .formularioEdad {
+    width: 70px; } }
+
+footer {
+  background-color: #1B2430;
+  margin-top: 50px;
+  height: 70px; }
+  footer h3 {
+    display: none; }
+  footer .iconoSponsor {
+    display: none; }
+  footer .iconRedes {
+    width: 48px;
+    padding: 5px;
+    height: 46px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px; }
+    footer .iconRedes:hover {
+      background-color: #0f141b; }
+  footer .redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 60px;
+    margin: 5px; }
+
+@media (min-width: 992px) {
+  footer {
+    margin-top: 100px;
+    height: 90px; }
+    footer h3 {
+      display: flex;
+      color: white;
+      font-family: "Staatliches", cursive;
+      font-size: 20px;
+      text-align: center; }
+    footer .nombreFooter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 15px; }
+    footer .iconoSponsor {
+      display: flex;
+      width: 60px;
+      margin: 0px 20px;
+      height: 60px; }
+    footer .sponsor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 10px; } }
 
 .canchaContenedor {
   position: relative;
@@ -288,31 +475,12 @@ table, tr, td {
   left: 75px;
   height: 40px; }
 
-.dtFoto {
-  height: 175px;
-  margin-right: auto;
-  margin-left: auto; }
-
 @media (min-width: 992px) {
-  .contenedorPlantilla {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "introduccionPlantilla liveTwitter" "tabla                 liveTwitter" "canchaContenedor      liveTwitter" "dtTitulo              liveTwitter" "dtTexto               liveTwitter" "dtFoto                liveTwitter"; }
-  .tabla {
-    margin-top: 50px; }
-    .tabla td {
-      font-family: "Staatliches", cursive;
-      font-size: 18px;
-      line-height: 25px;
-      text-align: center; }
-      .tabla td a {
-        padding: 0px;
-        font-size: 18px; }
   .canchaContenedor {
     position: relative;
     display: block;
-    margin-right: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    margin-right: auto; }
     .canchaContenedor .cancha {
       width: 400px;
       height: 400px; }
@@ -370,232 +538,50 @@ table, tr, td {
     position: absolute;
     top: 12px;
     left: 168px;
-    height: 55px; }
-  .dtFoto {
-    height: 280px;
-    margin-right: auto;
-    margin-left: auto; } }
+    height: 55px; } }
 
-.contenedorHistoria {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "tituloHistoria" "textoHistoria" "equipoOld" "tituloEstadio" "textoEstadio" "estadio" "tituloTrofeos" "textoTrofeos" "trofeos" "publicidadTexto" "publicidad"; }
-
-.tituloHistoria {
-  grid-area: tituloHistoria; }
-
-.textoHistoria {
-  grid-area: textoHistoria; }
-
-.equipoOld {
-  grid-area: equipoOld; }
-
-.tituloEstadio {
-  grid-area: tituloEstadio; }
-
-.textoEstadio {
-  grid-area: textoEstadio; }
-
-.estadio {
-  grid-area: estadio; }
-
-.tituloTrofeos {
-  grid-area: tituloTrofeos; }
-
-.textoTrofeos {
-  grid-area: textoTrofeos; }
-
-.trofeos {
-  grid-area: trofeos; }
-
-@media (min-width: 992px) {
-  .contenedorHistoria {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "tituloHistoria liveTwitter" "textoHistoria  liveTwitter" "equipoOld      liveTwitter" "tituloEstadio  liveTwitter" "textoEstadio   liveTwitter" "estadio        liveTwitter" "tituloTrofeos  liveTwitter" "textoTrofeos   liveTwitter" "trofeos        liveTwitter"; } }
-
-.contenedorHof {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "tituloHof" "textoHof" "tituloJugados" "tablaJugados" "tituloGol" "tablaGol" "tituloFerguson" "textoFerguson" "fotoFerguson" "publicidadTexto" "publicidad"; }
-
-.tituloHof {
-  grid-area: tituloHof; }
-
-.textoHof {
-  grid-area: textoHof; }
-
-.tituloJugados {
-  grid-area: tituloJugados; }
-
-.tablaJugados {
-  grid-area: tablaJugados; }
-
-.tituloGol {
-  grid-area: tituloGol; }
-
-.tablaGol {
-  grid-area: tablaGol; }
-
-.tituloFerguson {
-  grid-area: tituloFerguson; }
-
-.textoFerguson {
-  grid-area: textoFerguson; }
-
-.fotoFerguson {
-  grid-area: fotoFerguson; }
-
-h5 {
-  padding: 15px;
-  text-align: center;
-  margin: 0;
-  font-size: 20px;
-  font-family: "Staatliches", cursive; }
+.tabla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px; }
+  .tabla .datos {
+    font-family: "Staatliches", cursive;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center; }
 
 .datos {
-  background-color: #858585;
-  font-family: "Staatliches", cursive;
-  font-size: 10px;
-  line-height: 10px;
-  text-align: center; }
+  background-color: #858585; }
 
-@media (min-width: 992px) {
-  .contenedorHof {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "tituloHof      liveTwitter" "textoHof       liveTwitter" "tituloJugados  liveTwitter" "tablaJugados   liveTwitter" "tituloGol      liveTwitter" "tablaGol       liveTwitter" "tituloFerguson liveTwitter" "textoFerguson  liveTwitter" "fotoFerguson   liveTwitter"; }
-  h5 {
-    margin-top: 50px; } }
-
-.contenedorContactanos {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "tituloContactanos" "textoContactanos" "formulario" "publicidadTexto" "publicidad"; }
-
-.tituloContactanos {
-  grid-area: tituloContactanos; }
-
-.textoContactanos {
-  grid-area: textoContactanos; }
-
-.formulario {
-  grid-area: formulario; }
-
-form {
-  padding: 10px;
-  background: #D1D1D1;
-  border-radius: 10px;
-  max-width: 320px;
-  margin: 15px;
-  margin-right: auto;
-  margin-left: auto; }
-
-textarea {
-  width: 300px;
-  height: 200px;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px; }
-  textarea label {
-    font-size: 25px;
-    font-family: "Staatliches", cursive; }
-    textarea label input {
-      margin: 5px;
-      padding: 10px 10px;
-      height: 32px;
-      font-size: 15px;
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: bold; }
-
-.formularioNombre {
-  width: 80%; }
-
-.formularioEdad {
-  width: 30%; }
-
-.formularioEmail {
-  width: 80%; }
-
-.boton {
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 15px;
   padding: 5px; }
+  table td, tr td, td td {
+    font-family: "Staatliches", cursive;
+    font-size: 10px;
+    line-height: 10px;
+    width: 150px;
+    text-align: center; }
+    table td a, tr td a, td td a {
+      color: black;
+      padding: 0px;
+      font-size: 10px;
+      text-decoration: none;
+      font-family: "Staatliches", cursive; }
+      table td a:hover, tr td a:hover, td td a:hover {
+        color: #DA1212; }
 
 @media (min-width: 992px) {
-  .contenedorContactanos {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "tituloContactanos liveTwitter" "textoContactanos  liveTwitter" "formulario        liveTwitter"; }
-  form {
-    max-width: 740px; }
-  textarea {
-    width: 715px;
-    height: 600px; }
-  .formularioEmail {
-    width: 80%; }
-  .formularioNombre {
-    width: 80%; }
-  .formularioEdad {
-    width: 70px; } }
-
-footer {
-  background-color: #1B2430;
-  margin-top: 50px;
-  height: 70px; }
-  footer h3 {
-    display: none; }
-  footer .iconoSponsor {
-    display: none; }
-  footer .iconRedes {
-    width: 48px;
-    padding: 5px;
-    height: 46px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 10px; }
-    footer .iconRedes:hover {
-      background-color: #0f141b; }
-  footer .redesSociales {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-evenly;
-    height: 60px;
-    margin: 5px; }
-
-@media (min-width: 992px) {
-  footer {
-    margin-top: 100px;
-    height: 85px; }
-    footer h3 {
-      display: flex;
-      color: white;
+  .tabla {
+    margin-top: 50px; }
+    .tabla td {
       font-family: "Staatliches", cursive;
-      font-size: 20px;
+      font-size: 18px;
+      line-height: 25px;
       text-align: center; }
-    footer .nombreFooter {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid black;
-      border-radius: 10px;
-      padding: 15px;
-      font-size: 26px; }
-    footer .iconoSponsor {
-      display: flex;
-      width: 60px;
-      margin: 0px 20px;
-      height: 60px; }
-    footer .sponsor {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: auto;
-      margin-left: auto;
-      padding-top: 10px; } }
+      .tabla td a {
+        padding: 0px;
+        font-size: 18px; } }

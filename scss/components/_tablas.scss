@@ -1,0 +1,54 @@
+.tabla{
+    @include flexCenter;
+    margin-bottom: 100px;
+    .datos{
+        font-family: $ffTitulos;
+        font-size: 10px;
+        line-height: 10px;
+        text-align: center;
+    }   
+}
+
+.datos{
+    background-color: #858585;
+}
+
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 15px;
+    padding: 5px;  
+    td{
+        font-family: $ffTitulos;
+        font-size: 10px;
+        line-height: 10px;
+        width: 150px;
+        text-align: center;
+        a{
+            color:black;
+            padding: 0px;
+            font-size: 10px;
+            text-decoration: none;
+            font-family: $ffTitulos;
+            &:hover{
+                color:#DA1212;
+            }
+        }        
+    }   
+}
+
+@media (min-width: 992px){
+    .tabla{
+        margin-top: 50px;
+        td{
+            font-family: $ffTitulos;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            a{
+                padding: 0px;
+                font-size: 18px;
+            }
+        }
+    }
+}

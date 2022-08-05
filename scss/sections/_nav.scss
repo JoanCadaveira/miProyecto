@@ -49,7 +49,6 @@ h6{
         font-size: $ffTitulos;
     }
     .flex{
-        display: flex;
-        justify-content: center;
+        @include flexCenter;
     }
 }
