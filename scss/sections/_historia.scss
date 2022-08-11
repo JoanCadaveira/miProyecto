@@ -1,7 +1,4 @@
 .contenedorHistoria{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     grid-template-areas: 
     "tituloHistoria"
     "textoHistoria"
@@ -15,7 +12,24 @@
     "publicidadTexto"
     "publicidad"
     ;
-}
+    @include desktop{
+
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-areas: 
+            "tituloHistoria liveTwitter"
+            "textoHistoria  liveTwitter"
+            "equipoOld      liveTwitter"
+            "tituloEstadio  liveTwitter"
+            "textoEstadio   liveTwitter"
+            "estadio        liveTwitter"
+            "tituloTrofeos  liveTwitter"
+            "textoTrofeos   liveTwitter"
+            "trofeos        liveTwitter"
+            ;
+        }
+    }
+
 
 .tituloHistoria{
     grid-area: tituloHistoria;
@@ -53,20 +67,4 @@
     grid-area: trofeos;
 }
 
-@media (min-width: 992px){
-    .contenedorHistoria{
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-areas: 
-        "tituloHistoria liveTwitter"
-        "textoHistoria  liveTwitter"
-        "equipoOld      liveTwitter"
-        "tituloEstadio  liveTwitter"
-        "textoEstadio   liveTwitter"
-        "estadio        liveTwitter"
-        "tituloTrofeos  liveTwitter"
-        "textoTrofeos   liveTwitter"
-        "trofeos        liveTwitter"
-        ;
-    }
-}
+

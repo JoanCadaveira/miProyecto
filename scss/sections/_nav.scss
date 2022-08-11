@@ -16,7 +16,7 @@ h6{
         li{
             list-style: none;
             .navbar-texto{
-                font-size: 15px;
+                font-size: $tamañoTextoNav;
                 font-family: $ffTitulos;
             }
         }
@@ -33,7 +33,25 @@ h6{
     }
 }
 
-@media (min-width: 992px){
+.navbar-light .navbar-toggler-icon{
+    background-image: url("../assets/hamburger.svg");
+}    
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-light .navbar-toggler{
+    border-color: black;
+}
+
+@include desktop{
     .logo{
         height: 150px;
         width: 150px;
@@ -52,3 +70,4 @@ h6{
         @include flexCenter;
     }
 }
+

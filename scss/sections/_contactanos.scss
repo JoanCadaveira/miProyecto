@@ -1,7 +1,4 @@
 .contenedorContactanos{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     grid-template-areas: 
     "tituloContactanos"
     "textoContactanos"
@@ -9,6 +6,15 @@
     "publicidadTexto"
     "publicidad"
     ;
+    @include desktop {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-areas: 
+            "tituloContactanos liveTwitter"
+            "textoContactanos  liveTwitter"
+            "formulario        liveTwitter"
+            ;
+        }
 }
 
 .tituloContactanos{
@@ -25,19 +31,22 @@
 
 form{
     padding: 10px;
-    background: #D1D1D1;
+    background: #EEEEEE;
     border-radius: 10px;
     max-width: 320px;
     margin: 15px;
     margin-right: auto;
-    margin-left: auto;     
+    margin-left: auto;   
+    border-color: rgb(179, 179, 179);
+    border-style: solid;
+    border-width: 1px;  
 }
 
 textarea{
     width: 300px;
     height: 200px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     label{
         font-size: 25px;
@@ -46,7 +55,7 @@ textarea{
             margin: 5px;
             padding: 10px 10px;
             height: 32px;
-            font-size: 15px;
+            font-size: 20px;
             font-family: $ffTextos;
             font-weight: bold;
         }
@@ -69,24 +78,25 @@ textarea{
     padding: 5px;
 }
 
-@media (min-width: 992px){
-    .contenedorContactanos{
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-areas: 
-        "tituloContactanos liveTwitter"
-        "textoContactanos  liveTwitter"
-        "formulario        liveTwitter"
-        ;
-    }
-
+@include tablet{
     form{
-        max-width: 740px;
+        max-width: 600px;
     }
 
     textarea{
-        width: 715px;
-        height: 600px;
+        width: 575px;
+    }
+}
+
+@include desktop{
+    
+    form{
+        max-width: 625px;  
+    }
+
+    textarea{
+        width: 600px;
+        height: 200px;
     }
 
     .formularioEmail{

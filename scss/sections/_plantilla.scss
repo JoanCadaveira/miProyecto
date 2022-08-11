@@ -1,7 +1,5 @@
 .contenedorPlantilla{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     grid-template-areas: 
     "introduccionPlantilla"
     "tabla"
@@ -12,7 +10,19 @@
     "publicidadTexto"
     "publicidad"
     ;
-}
+    @include desktop{
+            grid-template-columns: 80% 20%;
+            grid-template-areas: 
+            "introduccionPlantilla liveTwitter"
+            "tabla                 liveTwitter"
+            "canchaContenedor      liveTwitter"
+            "dtTitulo              liveTwitter"
+            "dtTexto               liveTwitter"
+            "dtFoto                liveTwitter"
+            ;           
+        }
+    }
+
 
 .introduccionPlantilla{
     grid-area: introduccionPlantilla;
@@ -42,28 +52,4 @@ h4{
     @extend h1;
 }
 
-.dtFoto{   
-    height: 175px;
-    margin-right: auto;
-    margin-left: auto; 
-}
-
-@media (min-width: 992px){
-    .contenedorPlantilla{
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-areas: 
-        "introduccionPlantilla liveTwitter"
-        "tabla                 liveTwitter"
-        "canchaContenedor      liveTwitter"
-        "dtTitulo              liveTwitter"
-        "dtTexto               liveTwitter"
-        "dtFoto                liveTwitter"
-        ;
-    }
-
-    .dtFoto{
-        height: 280px;  
-    }
-}
 

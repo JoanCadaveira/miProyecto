@@ -1,8 +1,31 @@
 $colorRojo: #DA1212;
-$colorOscuro: #1B2430;
 $hoverRojo: #aa0f0f;
+$colorOscuro: #1B2430;
+$hoverOscuro: #0f141b;
+$colorFormulario: #EEEEEE;
+
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Staatliches&display=swap');
 
 $ffTitulos: 'Staatliches', cursive;
 $ffTextos: 'Source Sans Pro', sans-serif;
+
+$tamañoTextoNav: 15px;
+
+$tamañoTituloMobile: 20px;
+$marginTituloMobile: 20px 40px 0px 40px;
+$tamañoTextoMobile: 18px;
+$marginTextoMobile: 0px 40px 70px 40px;
+
+$tamañoTextoTablet: 17px;
+$marginTextoTablet: 0px 150px 20px 150px;
+
+
+$tamañoTituloDesktop: 22px;
+$tamañoTextoDesktop: 16px;
+$marginTextoDesktop: 0px 180px 20px 180px;
+
+$tamañoCamisetaMobile: 40px;
+$tamañoCamisetaDesktop: 55px;
+
+

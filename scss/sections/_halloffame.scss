@@ -1,7 +1,4 @@
 .contenedorHof{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     grid-template-areas: 
     "tituloHof"
     "textoHof"
@@ -15,6 +12,21 @@
     "publicidadTexto"
     "publicidad"
     ;
+    @include desktop {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-areas: 
+            "tituloHof      liveTwitter"
+            "textoHof       liveTwitter"
+            "tituloJugados  liveTwitter"
+            "tablaJugados   liveTwitter"
+            "tituloGol      liveTwitter"
+            "tablaGol       liveTwitter"
+            "tituloFerguson liveTwitter"
+            "textoFerguson  liveTwitter"
+            "fotoFerguson   liveTwitter"
+            ;
+        }
 }
 
 .tituloHof{
@@ -61,26 +73,20 @@ h5{
     font-family: $ffTitulos;
 }
 
-@media (min-width: 992px){
-    .contenedorHof{
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-areas: 
-        "tituloHof      liveTwitter"
-        "textoHof       liveTwitter"
-        "tituloJugados  liveTwitter"
-        "tablaJugados   liveTwitter"
-        "tituloGol      liveTwitter"
-        "tablaGol       liveTwitter"
-        "tituloFerguson liveTwitter"
-        "textoFerguson  liveTwitter"
-        "fotoFerguson   liveTwitter"
-        ;
-    }
+table{
+    margin: 0 15px 0 15px;
+}
+
+@include desktop{
     h5{
         margin-top: 50px;
     }
+
+    table{
+        margin: 0 100px 0 100px;
+    }   
 }
+
 
 
 

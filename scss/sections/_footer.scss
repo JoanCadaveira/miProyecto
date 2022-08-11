@@ -16,7 +16,7 @@ footer{
         border-radius: 10px;
         margin: 10px;
         &:hover{
-            background-color: #0f141b;
+            background-color: $hoverOscuro;
         }
     }
     .redesSociales{
@@ -27,7 +27,7 @@ footer{
     }
 }
 
-@media (min-width: 992px){
+@include desktop{
     footer{
         margin-top: 100px;
         height: 90px;

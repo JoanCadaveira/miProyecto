@@ -1,7 +1,4 @@
 .gridIndex{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     grid-template-areas: 
     "header"
     "main"
@@ -13,23 +10,30 @@ header{
     grid-area: header;
 }
 
+main{
+    grid-area: main;
+}
+
 footer{
     grid-area: footer;
 }
 
-.contenedorIndex{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+.contenedorIndex{     
     grid-template-areas: 
     "introduccion"
     "video"
     "publicidadTexto"
     "publicidad"
     ;
-}
-
+    @include desktop {
+            display: grid; 
+            grid-template-columns: 80% 20%;
+            grid-template-areas: 
+            "introduccion    liveTwitter"
+            "video           liveTwitter"
+            ;
+        }
+    }
 
 .introduccion{
     grid-area: introduccion;
@@ -47,11 +51,15 @@ footer{
     grid-area: publicidad;
 }
 
+.liveTwitter{
+    grid-area: liveTwitter;
+}
+
 h1{
     text-align: center;
-    font-size: 20px;
+    font-size: $tamañoTituloMobile;
     font-family: $ffTitulos;
-    margin: 20px 40px 0px 40px;
+    margin: $marginTituloMobile;
     padding: 40px;
 }
 
@@ -59,8 +67,8 @@ p{
     font-family: $ffTextos;
     padding: 15px;
     text-align: center;
-    margin: 0px 40px 70px 40px;
-    font-size: 10px;
+    margin: $marginTextoMobile;
+    font-size: $tamañoTextoMobile;
 }
 
 .videoIntro{
@@ -93,22 +101,33 @@ p{
 }
 
 
-@media (min-width: 992px){
-    .contenedorIndex{
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-areas: 
-        "introduccion    liveTwitter"
-        "video           liveTwitter"
-        ;
+@include tablet{
+    p{
+        font-size: $tamañoTextoTablet;
+        margin: $marginTextoTablet;
     }
 
+    .videoIntro{
+        margin-right: auto;
+        margin-left: auto;
+        border: 12px solid black;
+        border-radius: 10px;
+        display: block;
+        margin-top: 37px;
+        height: 280px;
+        width: 570px;
+    }
+}
+
+@include desktop{
+
     h1{
-        font-size: 25px;
+        font-size: $tamañoTituloDesktop;
     }
 
     p{
-        font-size: 18px;
+        font-size: $tamañoTextoDesktop;
+        margin: $marginTextoDesktop;
     }
 
     .publicidad, .publicidadTexto{
@@ -116,7 +135,6 @@ p{
     }
 
     .liveTwitter{
-        grid-area: liveTwitter;
         display: flex;
         font-weight: bold;
         border-color: rgb(179, 179, 179);

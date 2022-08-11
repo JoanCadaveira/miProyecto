@@ -37,7 +37,13 @@ table, tr, td{
     }   
 }
 
-@media (min-width: 992px){
+@include tablet{
+    .tabla{
+        margin: 40px 40px 40px 40px;
+    }
+}
+
+@include desktop{
     .tabla{
         margin-top: 50px;
         td{

@@ -1,8 +1,8 @@
 .canchaContenedor{
     position: relative;
     display: block;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     .cancha{
         width: 200px;
         height: 200px;
@@ -12,8 +12,8 @@
 .jugadorPlantilla{
     margin-left: auto;
     margin-right: auto;
-    width: 130px;
-    height: 130px;
+    width: 270px;
+    height: 270px;
     margin-top: 10px;
 }
 
@@ -21,85 +21,89 @@
     position: absolute;
     top: 147px;
     left: 75px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaLatIzq{
     position: absolute;
     top: 98px;
     left: 18px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaLatDer{
     position: absolute;
     top: 98px;
     left: 132px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaCenIzq{
     position: absolute;
     top: 111px;
     left: 45px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaCenDer{
     position: absolute;
     top: 111px;
     left: 104px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaMedDef{
     position: absolute;
     top: 79px;
     left: 75px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaMedIzq{
     position: absolute;
     top: 47px;
     left: 42px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaMedDer{
     position: absolute;
     top: 47px;
     left: 107px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaExtIzq{
     position: absolute;
     top: 17px;
     left: 30px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaExtDer{
     position: absolute;
     top: 17px;
     left: 120px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
 .camisetaDelCen{
     position: absolute;
     top: 0px;
     left: 75px;
-    height: 40px;
+    height: $tamañoCamisetaMobile;
 }
 
-@media (min-width: 992px){
+@include tablet{
+    .jugadorPlantilla{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@include desktop{
+    
     .canchaContenedor{
-        position: relative;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
         .cancha{
             width: 400px;
             height: 400px;
@@ -110,76 +114,81 @@
         position: absolute;
         top: 311px;
         left: 168px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
 
     .camisetaLatIzq{
         position: absolute;
         top: 212px;
         left: 55px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
     
     .camisetaLatDer{
         position: absolute;
         top: 212px;
         left: 285px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
     
     .camisetaCenIzq{
         position: absolute;
         top: 240px;
         left: 110px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
     
     .camisetaCenDer{
         position: absolute;
         top: 240px;
         left: 225px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
     
     .camisetaMedDef{
         position: absolute;
         top: 176px;
         left: 168px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
     
     .camisetaMedIzq{
         position: absolute;
         top: 112px;
         left: 106px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
     
     .camisetaMedDer{
         position: absolute;
         top: 112px;
         left: 229px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
     }
     
     .camisetaExtIzq{
         position: absolute;
         top: 52px;
         left: 78px;
-        height: 55px
+        height: $tamañoCamisetaDesktop;
     }
 
     .camisetaExtDer{
         position: absolute;
         top: 52px;
         left: 260px;
-        height: 55px
+        height: $tamañoCamisetaDesktop;
     }  
 
     .camisetaDelCen{
         position: absolute;
         top: 12px;
         left: 168px;
-        height: 55px;
+        height: $tamañoCamisetaDesktop;
+    }
+
+    .jugadorPlantilla{
+        width: 450px;
+        height: 450px;
     }
 }

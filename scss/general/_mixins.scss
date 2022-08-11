@@ -4,4 +4,14 @@
     justify-content: center;
 }
 
+@mixin desktop{
+    @media (min-width: 992px){
+        @content;
+    }
+}
 
+@mixin tablet{
+    @media (min-width: 768px){
+        @content;
+    }
+}
