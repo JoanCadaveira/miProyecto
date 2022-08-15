@@ -1,8 +1,12 @@
 .contenedorHistoria{
     grid-template-areas: 
     "tituloHistoria"
-    "textoHistoria"
-    "equipoOld"
+    "textoHistoria1"
+    "equipoOld1"
+    "textoHistoria2"
+    "equipoOld2"
+    "textoHistoria3"
+    "equipoOld3"
     "tituloEstadio"
     "textoEstadio"
     "estadio"
@@ -13,20 +17,40 @@
     "publicidad"
     ;
     @include desktop{
-
             display: grid;
-            grid-template-columns: 80% 20%;
+            grid-template-columns: 50% 30% 20%;
             grid-template-areas: 
-            "tituloHistoria liveTwitter"
-            "textoHistoria  liveTwitter"
-            "equipoOld      liveTwitter"
-            "tituloEstadio  liveTwitter"
-            "textoEstadio   liveTwitter"
-            "estadio        liveTwitter"
-            "tituloTrofeos  liveTwitter"
-            "textoTrofeos   liveTwitter"
-            "trofeos        liveTwitter"
+            "tituloHistoria tituloHistoria liveTwitter"
+            "textoHistoria1 equipoOld1     liveTwitter"
+            "textoHistoria2 equipoOld2     liveTwitter"
+            "textoHistoria3 equipoOld3     liveTwitter"
+            "tituloEstadio  tituloEstadio  liveTwitter"
+            "textoEstadio   textoEstadio   liveTwitter"
+            "estadio        estadio        liveTwitter"
+            "tituloTrofeos  tituloTrofeos  liveTwitter"
+            "textoTrofeos   textoTrofeos   liveTwitter"
+            "trofeos        trofeos        liveTwitter"
             ;
+        }
+
+        .texto2{
+            margin: 0;
+            text-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .estadio{
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1050px !important;
+        }
+
+        .trofeos{
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1050px !important;
         }
     }
 
@@ -35,12 +59,28 @@
     grid-area: tituloHistoria;
 }
 
-.textoHistoria{
-    grid-area: textoHistoria;
+.textoHistoria1{
+    grid-area: textoHistoria1;
 }
 
-.equipoOld{
-    grid-area: equipoOld;
+.textoHistoria2{
+    grid-area: textoHistoria2;
+}
+
+.textoHistoria3{
+    grid-area: textoHistoria3;
+}
+
+.equipoOld1{
+    grid-area: equipoOld1;
+}
+
+.equipoOld2{
+    grid-area: equipoOld2;
+}
+
+.equipoOld3{
+    grid-area: equipoOld3;
 }
 
 .tituloEstadio{
@@ -67,4 +107,15 @@
     grid-area: trofeos;
 }
 
+.equipoOld1{
+    margin: 20px 0 20px 0;
+}
+
+.equipoOld2{
+    margin: 20px 0 20px 0;
+}
+
+.equipoOld3{
+    margin: 20px 0 20px 0;
+}
 

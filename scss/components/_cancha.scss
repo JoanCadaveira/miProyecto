@@ -4,8 +4,15 @@
     margin-left: auto;
     margin-right: auto;
     .cancha{
-        width: 200px;
-        height: 200px;
+        width: 280px;
+        height: 280px;
+    }
+}
+
+.color{
+    &:hover{
+        background-color: #da121246;
+        padding: 5px;
     }
 }
 
@@ -19,78 +26,78 @@
 
 .camisetaPo{
     position: absolute;
-    top: 147px;
-    left: 75px;
+    top: 213px;
+    left: 113px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaLatIzq{
     position: absolute;
-    top: 98px;
-    left: 18px;
+    top: 145px;
+    left: 30px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaLatDer{
     position: absolute;
-    top: 98px;
-    left: 132px;
+    top: 145px;
+    left: 196px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaCenIzq{
     position: absolute;
-    top: 111px;
-    left: 45px;
+    top: 163px;
+    left: 73px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaCenDer{
     position: absolute;
-    top: 111px;
-    left: 104px;
+    top: 163px;
+    left: 152px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaMedDef{
     position: absolute;
-    top: 79px;
-    left: 75px;
+    top: 117px;
+    left: 113px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaMedIzq{
     position: absolute;
-    top: 47px;
-    left: 42px;
+    top: 73px;
+    left: 68px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaMedDer{
     position: absolute;
-    top: 47px;
-    left: 107px;
+    top: 73px;
+    left: 157px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaExtIzq{
     position: absolute;
-    top: 17px;
-    left: 30px;
+    top: 32px;
+    left: 49px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaExtDer{
     position: absolute;
-    top: 17px;
-    left: 120px;
+    top: 32px;
+    left: 178px;
     height: $tamañoCamisetaMobile;
 }
 
 .camisetaDelCen{
     position: absolute;
-    top: 0px;
-    left: 75px;
+    top: 4px;
+    left: 113px;
     height: $tamañoCamisetaMobile;
 }
 
