@@ -59,7 +59,7 @@ h6 {
     justify-content: center; } }
 
 .gridIndex {
-  grid-template-areas: "header" "main" "footer"; }
+  grid-template-areas: "header" "main" "footer"; }
 
 header {
   grid-area: header; }
@@ -71,12 +71,12 @@ footer {
   grid-area: footer; }
 
 .contenedorIndex {
-  grid-template-areas: "introduccion" "video" "publicidadTexto" "publicidad"; }
+  grid-template-areas: "introduccion" "video" "publicidadTexto" "publicidad"; }
   @media (min-width: 992px) {
     .contenedorIndex {
       display: grid;
       grid-template-columns: 80% 20%;
-      grid-template-areas: "introduccion    liveTwitter" "video           liveTwitter"; } }
+      grid-template-areas: "introduccion    liveTwitter" "video           liveTwitter"; } }
 
 .introduccion {
   grid-area: introduccion; }
@@ -153,7 +153,7 @@ p {
     font-size: 16px;
     margin: 0px 180px 20px 180px;
     text-indent: 20px; }
-  .publicidad, .publicidadTexto {
+  .publicidad, .publicidadTexto, .pasarela {
     display: none; }
   .liveTwitter {
     display: flex;
@@ -175,11 +175,11 @@ p {
 
 .contenedorPlantilla {
   display: grid;
-  grid-template-areas: "introduccionPlantilla" "tabla" "canchaContenedor" "dtTitulo" "dtTexto" "dtFoto" "publicidadTexto" "publicidad"; }
+  grid-template-areas: "introduccionPlantilla" "tabla" "canchaContenedor" "dtTitulo" "dtTexto" "dtFoto" "publicidadTexto" "publicidad"; }
   @media (min-width: 992px) {
     .contenedorPlantilla {
       grid-template-columns: 80% 20%;
-      grid-template-areas: "introduccionPlantilla liveTwitter" "tabla                 liveTwitter" "canchaContenedor      liveTwitter" "dtTitulo              liveTwitter" "dtTexto               liveTwitter" "dtFoto                liveTwitter"; } }
+      grid-template-areas: "introduccionPlantilla liveTwitter" "tabla                 liveTwitter" "canchaContenedor      liveTwitter" "dtTitulo              liveTwitter" "dtTexto               liveTwitter" "dtFoto                liveTwitter"; } }
   .contenedorPlantilla .dtFoto {
     margin-left: auto;
     margin-right: auto;
@@ -211,12 +211,12 @@ p {
   text-indent: 15px; }
 
 .contenedorHistoria {
-  grid-template-areas: "tituloHistoria" "textoHistoria1" "equipoOld1" "textoHistoria2" "equipoOld2" "textoHistoria3" "equipoOld3" "tituloEstadio" "textoEstadio" "estadio" "tituloTrofeos" "textoTrofeos" "trofeos" "publicidadTexto" "publicidad"; }
+  grid-template-areas: "tituloHistoria" "textoHistoria1" "equipoOld1" "textoHistoria2" "equipoOld2" "textoHistoria3" "equipoOld3" "tituloEstadio" "textoEstadio" "estadio" "tituloTrofeos" "textoTrofeos" "trofeos" "publicidadTexto" "publicidad"; }
   @media (min-width: 992px) {
     .contenedorHistoria {
       display: grid;
       grid-template-columns: 50% 30% 20%;
-      grid-template-areas: "tituloHistoria tituloHistoria liveTwitter" "textoHistoria1 equipoOld1     liveTwitter" "textoHistoria2 equipoOld2     liveTwitter" "textoHistoria3 equipoOld3     liveTwitter" "tituloEstadio  tituloEstadio  liveTwitter" "textoEstadio   textoEstadio   liveTwitter" "estadio        estadio        liveTwitter" "tituloTrofeos  tituloTrofeos  liveTwitter" "textoTrofeos   textoTrofeos   liveTwitter" "trofeos        trofeos        liveTwitter"; } }
+      grid-template-areas: "tituloHistoria tituloHistoria liveTwitter" "textoHistoria1 equipoOld1     liveTwitter" "textoHistoria2 equipoOld2     liveTwitter" "textoHistoria3 equipoOld3     liveTwitter" "tituloEstadio  tituloEstadio  liveTwitter" "textoEstadio   textoEstadio   liveTwitter" "estadio        estadio        liveTwitter" "tituloTrofeos  tituloTrofeos  liveTwitter" "textoTrofeos   textoTrofeos   liveTwitter" "trofeos        trofeos        liveTwitter"; } }
   .contenedorHistoria .texto2 {
     margin: 0;
     text-align: start;
@@ -281,12 +281,12 @@ p {
   margin: 20px 0 20px 0; }
 
 .contenedorHof {
-  grid-template-areas: "tituloHof" "textoHof" "tituloJugados" "tablaJugados" "tituloGol" "tablaGol" "tituloFerguson" "textoFerguson" "fotoFerguson" "publicidadTexto" "publicidad"; }
+  grid-template-areas: "tituloHof" "textoHof" "tituloJugados" "tablaJugados" "tituloGol" "tablaGol" "tituloFerguson" "textoFerguson" "fotoFerguson" "publicidadTexto" "publicidad"; }
   @media (min-width: 992px) {
     .contenedorHof {
       display: grid;
       grid-template-columns: 80% 20%;
-      grid-template-areas: "tituloHof      liveTwitter" "textoHof       liveTwitter" "tituloJugados  liveTwitter" "tablaJugados   liveTwitter" "tituloGol      liveTwitter" "tablaGol       liveTwitter" "tituloFerguson liveTwitter" "textoFerguson  liveTwitter" "fotoFerguson   liveTwitter"; } }
+      grid-template-areas: "tituloHof      liveTwitter" "textoHof       liveTwitter" "tituloJugados  liveTwitter" "tablaJugados   liveTwitter" "tituloGol      liveTwitter" "tablaGol       liveTwitter" "tituloFerguson liveTwitter" "textoFerguson  liveTwitter" "fotoFerguson   liveTwitter"; } }
 
 .tituloHof {
   grid-area: tituloHof; }
@@ -347,12 +347,12 @@ table tr td {
     text-align: start; } }
 
 .contenedorContactanos {
-  grid-template-areas: "tituloContactanos" "textoContactanos" "formulario" "publicidadTexto" "publicidad"; }
+  grid-template-areas: "tituloContactanos" "textoContactanos" "formulario" "publicidadTexto" "publicidad"; }
   @media (min-width: 992px) {
     .contenedorContactanos {
       display: grid;
       grid-template-columns: 80% 20%;
-      grid-template-areas: "tituloContactanos liveTwitter" "textoContactanos  liveTwitter" "formulario        liveTwitter"; } }
+      grid-template-areas: "tituloContactanos liveTwitter" "textoContactanos  liveTwitter" "formulario        liveTwitter"; } }
 
 .tituloContactanos {
   grid-area: tituloContactanos; }
