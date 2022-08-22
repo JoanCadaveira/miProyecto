@@ -114,7 +114,7 @@ p {
   border-radius: 15px;
   display: block;
   margin-top: 37px;
-  width: 280px; }
+  width: 320px; }
 
 .liveTwitter {
   display: none; }
@@ -156,7 +156,13 @@ p {
   .publicidad, .publicidadTexto, .pasarela {
     display: none; }
   .liveTwitter {
+    grid-area: liveTwitter;
     display: flex;
+    font-weight: bold;
+    border-color: #b3b3b3;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
     margin: 10px 5px; }
   .videoIntro {
     margin-right: auto;
