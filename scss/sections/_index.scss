@@ -27,7 +27,7 @@ footer{
     ;
     @include desktop {
             display: grid; 
-            grid-template-columns: 80% 20%;
+            grid-template-columns: 75% 25%;
             grid-template-areas: 
             "introduccion    liveTwitter"
             "video           liveTwitter"
@@ -139,6 +139,8 @@ p{
     .liveTwitter{
         grid-area: liveTwitter;
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
         margin: 10px 5px;
     }
 

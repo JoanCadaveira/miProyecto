@@ -14,7 +14,7 @@
     ;
     @include desktop {
             display: grid;
-            grid-template-columns: 80% 20%;
+            grid-template-columns: 75% 25%;
             grid-template-areas: 
             "tituloHof      liveTwitter"
             "textoHof       liveTwitter"
