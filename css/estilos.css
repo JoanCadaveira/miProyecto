@@ -157,11 +157,6 @@ p {
     display: none; }
   .liveTwitter {
     display: flex;
-    font-weight: bold;
-    border-color: #b3b3b3;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
     margin: 10px 5px; }
   .videoIntro {
     margin-right: auto;
